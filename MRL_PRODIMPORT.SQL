@@ -12,5 +12,5 @@ group by seqproduto)as Movimento_reg ,a.profundidade, a.largura, a.altura
      inner join mrl_prodempseg     e on e.seqproduto = b.seqproduto 
      inner join mrl_produtoempresa f on f.seqproduto = e.seqproduto and f.nroempresa = e.nroempresa 
      inner join mrl_custodia       g on g.seqproduto = b.seqproduto
-where b.seqproduto between 22004 and 22006 and b.qtdembalagem = 1 and e.motivoprecogerado not in ('Zera Precos')
+where b.seqproduto = "b.seqproduto" b.qtdembalagem = 1 and e.motivoprecogerado not in ('Zera Precos')
 order by b.seqproduto,b.codacesso,e.nroempresa;
